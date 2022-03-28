@@ -1,0 +1,132 @@
+/*fonts*/
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    --primary-cyan: hsl(193, 38%, 86%);
+    --primary-green: hsl(150, 100%, 66%);
+    --neutral-blue-100: hsl(217, 19%, 38%);
+    --neutral-blue-400: hsl(217, 19%, 24%);
+    --neutral-blue-700: hsl(218, 23%, 16%);
+    font-size: 28px;
+}
+/* Reset css*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral-blue-700);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.card {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 30px;
+    align-items: center;
+    width: 550px;
+    background-color: var(--neutral-blue-400);
+    font-family: "Manrope";
+    padding: 50px;
+    border-radius: 10px;
+    transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    &__header {
+        color: var(--primary-green);
+        justify-self: center;
+        font-size: 0.8rem;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    &__body {
+        color: var(--primary-cyan);
+        justify-self: center;
+        text-align: center;
+        font-weight: 800;
+    }
+    &__quote {
+        font-size: 1rem;
+    }
+    &__quote::before {
+        content: "\201C";
+        position: relative;
+        left: 6px;
+    }
+    &__quote::after {
+        content: "\201D";
+        position: relative;
+        right: 6px;
+        padding: 0;
+    }
+    &__divide {
+        background-image: url("../images/pattern-divider-desktop.svg");
+        background-repeat: no-repeat;
+        height: 16px;
+        background-position: center;
+        background-size: contain;
+        margin-bottom: 20px;
+    }
+    &__button {
+        background-color: var(--primary-green);
+        background-image: url("../images/icon-dice.svg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    &__button:hover {
+        cursor: pointer;
+        box-shadow: 0 0 2.5em 0.5em var(--primary-green);
+    }
+
+    &__button:active {
+        transform: scale(0.98);
+    }
+    &__footer {
+        position: absolute;
+        bottom: -30px;
+        justify-self: center;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        justify-self: center;
+    }
+}
