@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Advice-generator](https://github.com/olamide203/advice-generator)
+-   Live Site URL: [Advice-generator](https://olamide203.github.io/advice-generator/)
 
 ## My process
 
