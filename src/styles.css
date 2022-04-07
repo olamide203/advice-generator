@@ -101,15 +101,10 @@ main {
 
 .card__quote::before {
   content: "\201C";
-  position: relative;
-  left: 6px;
 }
 
 .card__quote::after {
   content: "\201D";
-  position: relative;
-  right: 6px;
-  padding: 0;
 }
 
 .card__divide {

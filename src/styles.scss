@@ -83,14 +83,9 @@ main {
     }
     &__quote::before {
         content: "\201C";
-        position: relative;
-        left: 6px;
     }
     &__quote::after {
         content: "\201D";
-        position: relative;
-        right: 6px;
-        padding: 0;
     }
     &__divide {
         background-image: url("../images/pattern-divider-desktop.svg");
