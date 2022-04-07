@@ -7,5 +7,3 @@ async function fetchAdvice() {
     const { slip } = data;
     quote.innerText = slip.advice;
 }
-
-// fetchAdvice();
