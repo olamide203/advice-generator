@@ -19,6 +19,7 @@
   --neutral-blue-100: hsl(217, 19%, 38%);
   --neutral-blue-400: hsl(217, 19%, 24%);
   --neutral-blue-700: hsl(218, 23%, 16%);
+  font-family: "Manrope";
   font-size: 28px;
 }
 
@@ -37,7 +38,15 @@
 
 html,
 body {
-  height: 100%;
+  background-color: var(--neutral-blue-700);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  min-height: 100vh;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -46,11 +55,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--neutral-blue-700);
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
 }
 
 .card {
@@ -68,7 +72,6 @@ body {
           align-items: center;
   width: 550px;
   background-color: var(--neutral-blue-400);
-  font-family: "Manrope";
   padding: 50px;
   border-radius: 10px;
   -webkit-transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -159,5 +162,69 @@ body {
     -ms-grid-column-align: center;
         justify-self: center;
   }
+}
+
+.attribution {
+  background-color: var(--neutral-blue-400);
+  padding: 10px 0;
+  text-align: center;
+  color: var(--primary-cyan);
+  font-weight: 400;
+  font-size: 0.46rem;
+}
+
+.attribution p {
+  word-spacing: 0.2rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--primary-cyan);
+  font-weight: 800;
+  position: relative;
+}
+
+.attribution a::after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary-green);
+  width: 100%;
+  height: 3px;
+  -webkit-transform: scalex(0.4);
+          transform: scalex(0.4);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.attribution a:hover::after {
+  -webkit-transform: scalex(1);
+          transform: scalex(1);
+}
+
+::-webkit-scrollbar {
+  width: 0.15em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-blue-400);
+  border-radius: 100vw;
+  margin-block: 0.1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-cyan);
+  /* border: 0.25em solid var(--desaturated-blue); */
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green);
 }
 /*# sourceMappingURL=styles.css.map */
