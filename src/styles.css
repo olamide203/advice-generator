@@ -66,15 +66,15 @@ main {
           justify-content: center;
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
-  row-gap: 30px;
+  row-gap: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 550px;
-  height: 350px;
+  min-height: 300px;
   background-color: var(--neutral-blue-400);
   padding: 50px;
-  border-radius: 10px;
+  border-radius: 15px;
   -webkit-transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
@@ -114,7 +114,7 @@ main {
   height: 16px;
   background-position: center;
   background-size: contain;
-  margin-bottom: 20px;
+  margin: 15px 0;
 }
 
 .card__button {
