@@ -71,6 +71,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   width: 550px;
+  height: 350px;
   background-color: var(--neutral-blue-400);
   padding: 50px;
   border-radius: 10px;
